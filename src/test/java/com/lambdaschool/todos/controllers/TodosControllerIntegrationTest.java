@@ -1,6 +1,5 @@
 package com.lambdaschool.todos.controllers;
 
-import com.lambdaschool.todos.TodosApplication;
 import com.lambdaschool.todos.TodosApplicationTests;
 import com.lambdaschool.todos.models.Todos;
 import com.lambdaschool.todos.models.User;
@@ -64,7 +63,7 @@ public class TodosControllerIntegrationTest
             "test@email.com");
         newUser.getTodos()
             .add(new Todos(newUser,
-                "testTodo"));
+                    "testTodo"));
         newUser = userService.save(newUser);
 
         mockMvc.perform(MockMvcRequestBuilders.patch("/todos/todo/{todoid}",
